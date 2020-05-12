@@ -36,7 +36,8 @@ module.exports = {
     'react/destructuring-assignment': 'off',
     'no-param-reassign': 'off',
     'no-console': ["error", { allow: ["tron"] }],
-    "react/jsx-props-no-spreading" : "off"
+    "react/jsx-props-no-spreading" : "off",
+    "no-underscore-dangle": 'off'
   },
   settings: {
     "import/resolver": {
