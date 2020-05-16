@@ -36,6 +36,8 @@ export function* signUp({ payload }) {
   try {
     const { name, email, password } = payload;
 
+    console.log(api.baseURL);
+
     yield call(api.post, 'users', {
       name,
       email,
