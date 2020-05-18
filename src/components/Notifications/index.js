@@ -61,6 +61,11 @@ export default function Notifications() {
 
       <NotificationList visible={visible}>
         <Scroll>
+          {!notifications.length && (
+            <Notification>
+              <p>Você não possui nenhum notificação</p>
+            </Notification>
+          )}
           {notifications.map((notification) => (
             <Notification key={notification._id} unread={!notification.read}>
               <p>{notification.content}</p>
