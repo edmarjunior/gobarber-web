@@ -30,9 +30,6 @@ export default function AvatarInput() {
 
     const { id, url } = response.data;
 
-    console.tron.log(id);
-    console.tron.log(url);
-
     setFile(id);
     setPreview(url);
   }

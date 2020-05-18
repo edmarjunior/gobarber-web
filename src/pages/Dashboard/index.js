@@ -37,24 +37,12 @@ export default function Dashboard() {
 
       const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
-      const datas = response.data.map((a) => {
-        return { ...a, convertida: parseISO(a.date) };
-      });
-
-      console.tron.log(datas);
-
       const data = range.map((hour) => {
         const checkDate = setMilliseconds(
           setSeconds(setMinutes(setHours(date, hour), 0), 0),
           0
         );
         const compareDate = utcToZonedTime(checkDate, timezone);
-
-        const exibicao = {
-          checkDate,
-          compareDate,
-        };
-        console.tron.log(exibicao);
 
         return {
           time: `${hour}:00h`,
